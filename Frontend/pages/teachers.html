@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Teachers</title>
+    <link rel="stylesheet" href="../styles/teachers.css" />
+  </head>
+  <body>
+    <div id="nav">
+      <!-- navContent -->
+    </div>
+
+    <!-- ---------------navbar-end------------- -->
+
+    <div id="searching">
+      <input
+        oninput="searchteacher()"
+        class="searchteacher"
+        placeholder="search teacher"
+      />
+      <input
+        oninput="searchsubject()"
+        class="searchsubject"
+        placeholder="search subject"
+      />
+    </div>
+    <div id="container"></div>
+
+    <!-- ------------------footer----------- -->
+    <div id="footerMain">
+      <!-- logo icons -->
+      <div>
+        <div>
+          <img
+            id="FooterLogo"
+            src="../images/learnmate-logo-(blue).png"
+            alt=""
+          />
+        </div>
+        <div id="icons">
+          <div><img src="../images/facebook.png" alt="" /></div>
+          <div><img src="../images/instagram.png" alt="" /></div>
+          <div><img src="../images/pinterest (1).png" alt="" /></div>
+          <div><img src="../images/twitter.png" alt="" /></div>
+          <div><img src="../images/youtube.png" alt="" /></div>
+        </div>
+      </div>
+      <!-- 2nd div -->
+      <div>
+        <h3>General Links</h3>
+        <p>Search</p>
+        <p>About us</p>
+        <p>Accreditations</p>
+        <p>Blog</p>
+        <p>Contact Us</p>
+      </div>
+      <!-- 3rd div -->
+      <div>
+        <h3>For Parents/Students</h3>
+        <p>How it Works</p>
+        <p>Pricing</p>
+        <p>Packages</p>
+        <p>FAQs</p>
+        <p>Login</p>
+      </div>
+      <!-- 4th div -->
+      <div>
+        <h3>For Tutors</h3>
+        <p>How it Works</p>
+        <p>Pricing</p>
+        <p>Packages</p>
+        <p>FAQs</p>
+        <p>Login</p>
+      </div>
+
+      <!-- Footer image -->
+      <div id="footerImg">
+        <img
+          src="https://img.freepik.com/premium-photo/smiling-cute-teenage-girl-sunglasses-holding-notebook-writing-something-down-girl-blue-background-copy-space_2221-7455.jpg"
+          alt=""
+        />
+      </div>
+    </div>
+  </body>
+</html>
+<script src="../scripts/teacher.js"></script>
+<!-- nav -->
+<script>
+  let username = localStorage.getItem("username");
+
+  let nav = document.querySelector("#nav");
+  if (username == null) {
+    nav.innerHTML = null;
+    nav.innerHTML = `<div>
+          <a href="./index.html"
+            ><img src="./learnmate-logo.png" alt="" id="logo"
+          /></a>
+        </div>
+        <div id="navbtnDiv">
+          <button id="navBtn">
+            <a href="./teachers.html">Tutors</a>
+          </button>
+
+          <button id="navBtn"><a href="../pages/showappointment.html">Schedules</a></button>
+          <button id="navBtn">
+            <a href="../loginSignup/signup.html">Signup</a>
+          </button>
+
+          <button id="navBtn">
+            <a href="../loginSignup/login.html">SignIn</a>
+          </button>
+        </div>
+
+        <div id="hamburger">
+          <img src="./images/menus.png" alt="" />
+          <div id="hamBtn">
+            <button id="navBtn">
+            <a href="./teachers.html">Tutors</a>
+          </button>
+
+          <button id="navBtn"><a href="../pages/showappointment.html">Schedules</a></button>
+          <button id="navBtn">
+            <a href="../loginSignup/signup.html">Signup</a>
+          </button>
+
+          <button id="navBtn">
+            <a href="../loginSignup/login.html">SignIn</a>
+          </button>
+          </div>
+        </div>`;
+  } else {
+    nav.innerHTML = null;
+    nav.innerHTML = `<div>
+          <a href="./index.html"
+            ><img src="./learnmate-logo.png" alt="" id="logo"
+          /></a>
+        </div>
+        <div id="navbtnDiv">
+          <button id="navBtn">
+            <a href="./teachers.html">Tutors</a>
+          </button>
+
+          <button id="navBtn"><a href="../pages/showappointment.html">Schedules</a></button>
+          <button class="logoutBtn">Logout</button>
+        </div>
+
+        <div id="hamburger">
+          <img src="./images/menus.png" alt="" />
+          <div id="hamBtn">
+            <button id="navBtn">
+              <a href="./teachers.html">Tutors</a>
+            </button>
+
+            <button id="navBtn"><a href="../pages/showappointment.html">Schedules</a></button>
+            <button class="logoutBtn">Logout</button>
+          </div>
+        </div>`;
+
+    let logoutBtn = document.querySelector(".logoutBtn");
+    logoutBtn.addEventListener("click", () => {
+      localStorage.removeItem("username");
+      window.location.href = "../index.html";
+    });
+  }
+</script>
