@@ -1,0 +1,197 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family:sans-serif;
+}
+nav{
+    border: 1px solid;
+    display: flex;
+    justify-content: space-between;
+}
+.title{
+    border: 1px solid red;
+    width: 200px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+.logindiv{
+    display: flex;
+    border: 1px solid;
+}
+.account{
+ border: 1px solid rgb(115, 13, 13);
+ display: flex;
+ width: 90px;
+ justify-content: space-around;
+ margin-right: 30px;
+ margin-top: 10px;
+ 
+}
+.hamberger{
+    border: 1px solid;
+    padding-top: 6px;
+    display: none;
+}
+.hamberger div{
+    border: 2px solid;
+    width:30px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+.userdisplay{
+    width: 40px;
+    height: 40px;
+    background-color: pink;
+    border-radius: 50%;
+    display: none;
+}
+.loginbutton{
+    border: 1px solid;
+    position: relative;
+    width: 100px;
+    border-radius: 20px ;
+    font-weight: bold;
+    background-color: rgb(245, 161, 189);
+    /* display: none; */
+}
+.loginfortutor button{
+    background-color: pink;
+    margin-top: 10px;
+    height: 40px;
+    margin-right: 30px;
+    font-weight: bold;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.div1{
+    border: 1px solid;
+    display: flex;
+    height: 100vh;
+    background-color: pink;
+}
+.div1-child1{
+    width: 50%;
+    /* border: 1px solid red; */
+}
+.div1-heading{
+    margin-left:25%;
+    margin-top: 150px;
+    font-size: 28px;
+}
+.div1-subheading{
+    margin-left:25%;
+    margin-top:10px;
+    font-size: 15px;
+}
+.div1-subheading span{
+    color: red;
+}
+.div1-form{
+    display: flex;
+    /* border: 1px solid; */
+    max-width: 450px;
+    height: px;
+    margin-left: 25%;
+    margin-top: 30px;
+    border-radius: 10px;
+    background-color: white;
+    justify-content: space-between;
+}
+.div1-form button{
+    background-color: rgb(244, 97, 97);
+    color: white;
+    font-weight: bolder;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 10px;
+    border: 0px;
+}
+
+.subject-selection{
+    display: flex;
+}
+.subject-selection h4{
+    /* border: 1px solid; */
+    /* width: 300px; */
+     margin-top: 12px;
+     padding-left: 25px;
+}
+
+.div1-child2{
+    width: 50%;
+    /* border: 1px solid red; */
+}
+
+.div1-child2>div{
+ width: 200px;
+ height: 250px;
+ /* border: 1px solid; */
+ border-radius: 10px;
+}
+#tutorimg1{
+    /* border: 1px solid red; */
+    position:absolute;
+     top: 150px;
+     left: 65%;
+     rotate: 20deg;
+}
+#tutorimg1 img{
+    height: 100%;
+}
+#tutorimg2{
+    /* border: 1px solid red; */
+    position:absolute;
+     top: 400px;
+     left: 60%;
+     rotate: -20deg;
+}
+#tutorimg3{
+    /* border: 1px solid red; */
+    position:absolute;
+     top:320px;
+     left: 78%;
+     
+}
+
+.div1-child2 img{
+  width: 100%;
+  border-radius: 10px;
+}
+.div1-child2 .tutor-detail{
+    /* border: 1px solid; */
+    width: 100px;
+    height:65px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+    box-shadow: rgba(217, 217, 222, 0.2) 0px 7px 29px 0px;
+    
+}
+#tutor-detail1{
+    position:absolute;
+     top: 330px;
+     left: 60%;
+     rotate: 0deg;
+}
+#tutor-detail2{
+    position:absolute;
+     top: 600px;
+     left: 68%;
+     rotate: 0deg;
+}
+#tutor-detail3{
+    position:absolute;
+     top: 550px;
+     left: 83%;
+     rotate: 0deg;
+}
+.tutor-rating{
+    display: flex;
+}
+
+
