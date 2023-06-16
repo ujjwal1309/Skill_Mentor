@@ -1,7 +1,10 @@
 *{
     margin: 0px;
     padding: 0px;
-    font-family:sans-serif;
+   
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Signika', sans-serif;
 }
 .nav{
     /* border: 1px solid; */
@@ -30,27 +33,67 @@
     width: 30%;
     margin-right: 10px;
 }
+.title h1{
+    /* border: 1px solid; */
+    padding-top: 10px;
+}
 .logindiv{
     display: flex; 
     /* border: 1px solid; */
 }
 .account{
- /* border: 1px solid rgb(115, 13, 13); */
  display: flex;
  width: 90px;
  justify-content: space-around;
  margin-right: 30px;
  margin-top: 10px;
- 
+ /* border: 1px solid rgb(115, 13, 13); */
+}
+.accountIflogin{
+    border-radius: 20px;
+    background-color: white;
+}
+.accountpopup{
+    border: 1px solid;
+    width: 10px;
+}
+.accountdropdown{
+    /* border: 1px solid; */
+    background-color: white;
+    border-radius: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: absolute;
+    top:80px;
+    right: 1%;
+}
+.accountdropdown>div{
+  /* border: 1px solid; */
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: bold;
+}
+.accountdropdown>div:last-child{
+    color: red;
+}
+.accountdropdown>div:hover{
+    background-color: rgb(201, 207, 212);
 }
 .hamberger{
-    border: 1px solid;
-    padding-top: 6px;
+    /* border: 1px solid; */
+    padding-top: 8px;
     display: none;
+
+}
+.hambergerIflogin{
+    display: block;
 }
 .hamberger div{
-    border: 2px solid;
-    width:30px;
+    height: 3px;
+    background-color: blueviolet;
+    width:25px;
     margin-top: 5px;
     border-radius: 5px;
 }
@@ -60,6 +103,16 @@
     background-color: pink;
     border-radius: 50%;
     display: none;
+    text-align: center;
+    margin-top: 4px;
+    /* border: 1px solid; */
+}
+.userdisplayIflogin{
+    display:block;
+}
+.firstletter{
+    color: rgb(119, 115, 115);
+    margin-top: 5px;
 }
 .loginbutton{
     border: 1px solid;
@@ -72,6 +125,9 @@
     height: 40px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     /* display: none; */
+}
+.loginbuttonIflogin{
+    display: none;
 }
 
 .loginbutton:hover{
@@ -88,6 +144,9 @@
     padding-right: 10px;
     border: 0px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.tutorloginIflogin{
+    display: none;
 }
 .loginbuttononscroll{
     background-color:rgb(217, 208, 208);
@@ -457,3 +516,6 @@
         width: 100%;
         height: 40px;
     }
+
+
+      
