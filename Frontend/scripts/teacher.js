@@ -1,6 +1,8 @@
 
-let port = "8080"
-let baseurl = `http://localhost:${port}/teacher/allteacher`;
+// let port = "8080"
+// let baseurl = `http://localhost:${port}/teacher/allteacher`;
+
+let baseurl = "https://alert-lime-bracelet.cyclic.app/teacher/allteacher";
 
 
 let bag = [];
@@ -43,6 +45,9 @@ function displaycard(data) {
     let anc = document.createElement("a");
     anc.href = "../pages/teacherprofile.html";
     let div = document.createElement("div");
+
+    div.setAttribute("class","box")
+
     div.addEventListener("click", function () {
       localStorage.setItem("profile", JSON.stringify(elem));
     });
