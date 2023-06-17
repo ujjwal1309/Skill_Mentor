@@ -1,4 +1,4 @@
-const { TeacherModel } = require("../model/teacher.model");
+const { TeacherModel } = require("../models/teacher.model");
 const teacherRouter = require("express").Router();
 
 //get all teacher

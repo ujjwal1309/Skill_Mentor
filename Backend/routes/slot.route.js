@@ -1,4 +1,4 @@
-const { slotModel } = require("../model/slots.model");
+const { slotModel } = require("../models/slot.model");
 const slotRoute = require("express").Router();
 
 slotRoute.get("/allSlots", async (req, res) => {
