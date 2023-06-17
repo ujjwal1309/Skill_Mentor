@@ -22,7 +22,7 @@ async function bookSlot(date, time) {
   let studentID = localStorage.getItem("studentID");
   let obj = { teacherEmailID, studentID, date, time };
 
-  let addSlot = await fetch("https://alert-lime-bracelet.cyclic.app/bookSlots", {
+  let addSlot = await fetch("https://tired-frog-cap.cyclic.app/bookSlots", {
     method: "POST",
     headers: {
       "Content-type": "application/json",
