@@ -1,0 +1,146 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  #container {
+    display: flex;
+  }
+  #container > img {
+    width: 40%;
+    height: 745px;
+  }
+  #signup_main_Div {
+    width: 60%;
+  }
+  #logo {
+    margin-top: 50px;
+    width: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* form */
+  form {
+    margin: auto;
+    width: 45%;
+    padding: 20px;
+    margin-top: 50px;
+    border: 1px solid rgb(224, 224, 224);
+  }
+  form label {
+    line-height: 26px;
+  }
+  form input {
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    height: 40px;
+    padding: 10px;
+    margin-top: 2px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(224, 224, 224);
+    border-radius: 5px;
+  }
+  form input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    margin: auto;
+  }
+  form input:focus {
+    border: 1px solid rgb(254, 203, 49);
+    box-shadow: 0 0 3px rgb(254, 203, 49);
+    -moz-box-shadow: 0 0 3px rgb(254, 203, 49);
+    -webkit-box-shadow: 0 0 3px rgb(254, 203, 49);
+  }
+  #signupBtn {
+    background-color: rgb(254, 203, 49);
+    color: white;
+    margin-top: 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #signupBtn:hover {
+    filter: brightness(110%);
+  }
+  #loginPageDiv {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  #loginPageDiv > a {
+    text-decoration: none;
+  }
+  form > h1 {
+    margin-bottom: 30px;
+  }
+  #forgotPassA {
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+  }
+  /* switch button */
+  .switchButton {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 260px;
+    height: 39px;
+    background: white;
+    border-radius: 20px;
+    border: 1px solid rgb(201, 201, 201);
+  }
+  
+  .button-element {
+    width: 140px;
+    height: 39px;
+    background: rgb(254, 203, 49);
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.14);
+    border-radius: 20px 0px 0px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+  }
+  
+  #student {
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 0.2px;
+    color: #fff;
+  }
+  
+  #tutor {
+    font-family: Lato;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 0.2px;
+    color: #723e53;
+    padding-left: 30px;
+  }
+  
+  .switchContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  @media screen and (max-width: 1080px) {
+    #container > img {
+      display: none;
+    }
+    #container {
+      flex-direction: column;
+      align-items: center;
+    }
+    form {
+      width: 80%;
+    }
+  }
+  
