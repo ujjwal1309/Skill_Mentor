@@ -1,8 +1,4 @@
-
-// let port = "8080"
-// let baseurl = `http://localhost:${port}/teacher/allteacher`;
-
-let baseurl = "https://alert-lime-bracelet.cyclic.app/teacher/allteacher";
+let baseurl = "https://tired-frog-cap.cyclic.app/teacher/allteacher";
 
 
 let bag = [];

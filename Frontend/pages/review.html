@@ -5,8 +5,9 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Teachers</title>
-  <link rel="stylesheet" href="../styles/teachers.css" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../styles/review.css" />
 </head>
 
 <body>
@@ -15,55 +16,62 @@
   </div>
 
   <!-- ---------------navbar-end------------- -->
-
-  <div id="searching">
-    <input oninput="searchteacher()" class="searchteacher" placeholder="search teacher" />
-    <input oninput="searchsubject()" class="searchsubject" placeholder="search subject" />
+  <div id="main">
+    <input id="input" type="text" placeholder="Write your review" />
+    <button class="button" id="btn" onclick="show('popup')">Submit</button>
+    <div class="popup" id="popup">
+      <i class="fa fa-check-circle" style="font-size: 70px; color: rgb(0, 255, 60)"></i>
+      <h2>Review submitted</h2>
+      <a href="./teacherprofile.html" onclick="hide('popup')">OK</a>
+    </div>
   </div>
-  <div id="container"></div>
 
   <!-- Footer  -->
   <footer>
     <div id="footer">
-        <div id="footer-one">
-          <div id="footer-head">
-            <p><b>Help</b></p>
-            <p>Customer Service</p>
-            <p>Track Order</p>
-            <p>Returns & Exchanges</p>
-            <p>Shipping</p>
-            <p>International Orders</p>
-            <p>Contact Us</p>
-          </div>
-          <div>
-            <p><b>Quick Links</b></p>
-            <p>Find a Store</p>
-            <p>Size Charts</p>
-            <p>Offers & Promotions</p>
-            <p>My Favorites</p>
-          </div>
-          <div>
-            <p><b>About Mawaw</b></p>
-            <p>Our Story</p>
-            <p>Careers</p>
-            <p>Social Responsibility</p>
-            <p>Privacy Policy</p>
-          </div>
-          <div style="display: flex;">
-            <input type="text" placeholder="Enter your Email" style="height: 30px; margin-top: 60px; background-color:grey">
-            <button style="background-color: rgb(71, 69, 69); color:white; height: 34px;margin-top: 60px;padding: 10px;">SIGN UP</button>
-          </div>
+      <div id="footer-one">
+        <div id="footer-head">
+          <p><b>Help</b></p>
+          <p>Customer Service</p>
+          <p>Track Order</p>
+          <p>Returns & Exchanges</p>
+          <p>Shipping</p>
+          <p>International Orders</p>
+          <p>Contact Us</p>
         </div>
-        <div id="footer-two">
-          <div id="footer-two-one" >
-            <div>
+        <div>
+          <p><b>Quick Links</b></p>
+          <p>Find a Store</p>
+          <p>Size Charts</p>
+          <p>Offers & Promotions</p>
+          <p>My Favorites</p>
+        </div>
+        <div>
+          <p><b>About Mawaw</b></p>
+          <p>Our Story</p>
+          <p>Careers</p>
+          <p>Social Responsibility</p>
+          <p>Privacy Policy</p>
+        </div>
+        <div style="display: flex;">
+          <input type="text" placeholder="Enter your Email"
+            style="height: 30px; margin-top: 60px; background-color:grey">
+          <button
+            style="background-color: rgb(71, 69, 69); color:white; height: 34px;margin-top: 60px;padding: 10px;">SIGN
+            UP</button>
+        </div>
+      </div>
+      <div id="footer-two">
+        <div id="footer-two-one">
+          <div>
             <img src="https://www.jcrew.com/next-static/images/sidecar-modules/footer/instagram-2.svg" alt="">
           </div>
           <div>
             <img src="https://www.jcrew.com/next-static/images/sidecar-modules/footer/twitter-2.svg" alt="">
           </div>
           <div>
-            <img style="margin-top: 5px;" src="https://www.jcrew.com/next-static/images/sidecar-modules/footer/linkedin.svg" alt="">
+            <img style="margin-top: 5px;"
+              src="https://www.jcrew.com/next-static/images/sidecar-modules/footer/linkedin.svg" alt="">
           </div>
           <div>
             <img src="https://www.jcrew.com/next-static/images/sidecar-modules/footer/pinterest-2.svg" alt="">
@@ -71,23 +79,30 @@
           <div>
             <img src="https://www.jcrew.com/next-static/images/sidecar-modules/footer/youtube-2.svg" alt="">
           </div>
-          </div>
         </div>
       </div>
+    </div>
 
     <div style="width: 70%; margin: auto; padding-top: 10px;padding-left: 80px;">
-        <p style="color: white; ">© 2023 Skillmentor, Explore. Learn</p>
+      <p style="color: white; ">© 2023 Skillmentor, Explore. Learn</p>
     </div>
-</footer>
+  </footer>
+
 </body>
 
 </html>
+<script>
+  $ = function (id) {
+    return document.getElementById(id);
+  };
 
-<!-- Main js  -->
-<script src="../scripts/teacher.js"></script>
-
-
-<!-- nav -->
+  var show = function (id) {
+    $(id).style.display = "block";
+  };
+  var hide = function (id) {
+    $(id).style.display = "none";
+  };
+</script>
 <script>
   let username = localStorage.getItem("username");
 
