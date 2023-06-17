@@ -1,6 +1,7 @@
 
-// localStorage.setItem("username","sourabh")
 
+
+// copy this code for navbar......................................................
 // navbar colorchange on scroll.......
 window.addEventListener("scroll",()=>{
   if(window.scrollY>100){
@@ -64,7 +65,7 @@ else{
   document.querySelector(".account").classList.remove("accountIflogin")
 }
 
-// ...............................................
+// nav bar ......................................................................
 
 let subjectSelection=document.querySelector(".subject-selection")
 
