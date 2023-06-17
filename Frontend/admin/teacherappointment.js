@@ -8,7 +8,7 @@ async function getData() {
   
  
       try {
-          let res = await fetch(`https://alert-lime-bracelet.cyclic.app/teacherSlots/${email}`, {
+          let res = await fetch(`https://tired-frog-cap.cyclic.app/teacherSlots/${email}`, {
               method: "GET",
               headers: {
                   "Content-Type": "application/json",
