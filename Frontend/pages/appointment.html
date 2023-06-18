@@ -1,108 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./sappointment.css" />
-</head>
-
-<body>
-
-  <nav class="nav">
-    <div class="title">
-      <img src="../images/skill mentor.jpg" alt="">
-      <h1>SKILL MENTOR</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/appointment.css" />
+  </head>
+  <body>
+    <div id="nav">
+      <!-- navContent -->
     </div>
-    <div class="logindiv">
-      <div class="loginfortutor">
-        <button class="tutorlogin">Give private Classes</button>
-      </div>
-      <div class="account">
-        <div class="hamberger">
-          <div></div>
-          <div></div>
-          <div></div>
+
+    <!-- ---------------navbar-end------------- -->
+    <div id="main">
+      <div id="top">
+        <div id="left">
+          <img class="image" alt="profile" />
+          <h2 class="name"></h2>
+          <h3 class="subject"></h3>
+          <h3 class="rating">&#9733; &#9733; &#9733; &#9733; &#9733;</h3>
         </div>
-        <div class="userdisplay">
+
+        <div id="right">
+          <form id="form" action="">
+            <h2>Choose a Date</h2>
+            <input
+              name="setTodaysDate"
+              id="date"
+              class="date-time"
+              type="date"
+            />
+            <h2>Choose Time Slot</h2>
+            <select id="time" class="date-time" name="">
+              <option class="option" value="9AM-11AM">9AM-11AM</option>
+              <option class="option" value="12PM-2PM">12PM-2PM</option>
+              <option class="option" value="4PM-6PM">4PM-6PM</option>
+              <option class="option" value="7PM-9PM">7PM-9PM</option>
+            </select>
+            <h2></h2>
+            <input id="submit" type="submit" value="confirm" />
+          </form>
         </div>
-        <button class="loginbutton">
-          Log in
-        </button>
       </div>
     </div>
-  </nav>
 
-
-
-  <div id="after-nav-col-2" class="side-part appointment all-appoint">
-
-    <table id="teacher">
-      <thead>
-        <tr>
-          <th scope="col">Id</th>
-          <th scope="col">Teacher EmailID</th>
-          <th scope="col">Date</th>
-          <th scope="col">Time</th>
-          <th scope="col">Status</th>
-
-
-
-        </tr>
-      </thead>
-      <tbody id="teachers">
-      </tbody>
-    </table>
-
-  </div>
-
+    
+     <!-- Footer  -->
   <footer>
     <div id="footer">
-      <div id="footer-one">
-        <div id="footer-head">
-          <p><b>Help</b></p>
-          <p>Customer Service</p>
-          <p>Track Order</p>
-          <p>Returns & Exchanges</p>
-          <p>Shipping</p>
-          <p>International Orders</p>
-          <p>Contact Us</p>
-        </div>
-        <div>
-          <p><b>Quick Links</b></p>
-          <p>Find a Store</p>
-          <p>Size Charts</p>
-          <p>Offers & Promotions</p>
-          <p>My Favorites</p>
-        </div>
-        <div>
-          <p><b>About Mawaw</b></p>
-          <p>Our Story</p>
-          <p>Careers</p>
-          <p>Social Responsibility</p>
-          <p>Privacy Policy</p>
-        </div>
-        <div style="display: flex;">
-          <input type="text" placeholder="Enter your Email"
-            style="height: 30px; margin-top: 60px; background-color:grey">
-          <button
-            style="background-color: rgb(71, 69, 69); color:white; height: 34px;margin-top: 60px;padding: 10px;">SIGN
-            UP</button>
-        </div>
-      </div>
-      <div id="footer-two">
-        <div id="footer-two-one">
+        <div id="footer-one">
+          <div id="footer-head">
+            <p><b>Help</b></p>
+            <p>Customer Service</p>
+            <p>Track Order</p>
+            <p>Returns & Exchanges</p>
+            <p>Shipping</p>
+            <p>International Orders</p>
+            <p>Contact Us</p>
+          </div>
           <div>
+            <p><b>Quick Links</b></p>
+            <p>Find a Store</p>
+            <p>Size Charts</p>
+            <p>Offers & Promotions</p>
+            <p>My Favorites</p>
+          </div>
+          <div>
+            <p><b>About Mawaw</b></p>
+            <p>Our Story</p>
+            <p>Careers</p>
+            <p>Social Responsibility</p>
+            <p>Privacy Policy</p>
+          </div>
+          <div style="display: flex;">
+            <input type="text" placeholder="Enter your Email" style="height: 30px; margin-top: 60px; background-color:grey">
+            <button style="background-color: rgb(71, 69, 69); color:white; height: 34px;margin-top: 60px;padding: 10px;">SIGN UP</button>
+          </div>
+        </div>
+        <div id="footer-two">
+          <div id="footer-two-one" >
+            <div>
             <img src="https://www.jcrew.com/next-static/images/sidecar-modules/footer/instagram-2.svg" alt="">
           </div>
           <div>
             <img src="https://www.jcrew.com/next-static/images/sidecar-modules/footer/twitter-2.svg" alt="">
           </div>
           <div>
-            <img style="margin-top: 5px;"
-              src="https://www.jcrew.com/next-static/images/sidecar-modules/footer/linkedin.svg" alt="">
+            <img style="margin-top: 5px;" src="https://www.jcrew.com/next-static/images/sidecar-modules/footer/linkedin.svg" alt="">
           </div>
           <div>
             <img src="https://www.jcrew.com/next-static/images/sidecar-modules/footer/pinterest-2.svg" alt="">
@@ -110,20 +95,19 @@
           <div>
             <img src="https://www.jcrew.com/next-static/images/sidecar-modules/footer/youtube-2.svg" alt="">
           </div>
+          </div>
         </div>
       </div>
-    </div>
 
     <div style="width: 70%; margin: auto; padding-top: 10px;padding-left: 80px;">
-      <p style="color: white; ">© 2023 Skillmentor, Explore. Learn</p>
+        <p style="color: white; ">© 2023 Skillmentor, Explore. Learn</p>
     </div>
-  </footer>
+</footer>
 
 
-
-  <script src="./sappointment.js"></script>
-
+  </body>
 </html>
+<script src="../scripts/appointment.js"></script>
 <script>
   let username = localStorage.getItem("username");
 

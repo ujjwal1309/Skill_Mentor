@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="./forgotPass.css" />
+    <link rel="stylesheet" href="sweetalert2.min.css" />
+  </head>
+  <body>
+    <div id="container">
+      <form action="" id="mainForm">
+        <img
+          id="forgetPAssLogo"
+          src="https://img.freepik.com/free-vector/forgot-password-concept-illustration_114360-1123.jpg?w=4000"
+          alt="forgetPAssLogo"
+        />
+        <h1>Reset password</h1>
+        <p>
+          Enter the email address associated with your account, and we'll email
+          you a link to reset your password.
+        </p>
+        <label for="email">Email</label><br />
+        <input type="email" id="email" required/><br />
+        <div>
+          <button id="cancelBtn">Cancel</button>
+          <input type="submit" value="Reset password" id="submitButton" />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./forgotPass.js"></script>

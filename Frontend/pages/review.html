@@ -2,62 +2,31 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
-  <link rel="stylesheet" href="./sappointment.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../styles/review.css" />
 </head>
 
 <body>
-
-  <nav class="nav">
-    <div class="title">
-      <img src="../images/skill mentor.jpg" alt="">
-      <h1>SKILL MENTOR</h1>
-    </div>
-    <div class="logindiv">
-      <div class="loginfortutor">
-        <button class="tutorlogin">Give private Classes</button>
-      </div>
-      <div class="account">
-        <div class="hamberger">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>
-        <div class="userdisplay">
-        </div>
-        <button class="loginbutton">
-          Log in
-        </button>
-      </div>
-    </div>
-  </nav>
-
-
-
-  <div id="after-nav-col-2" class="side-part appointment all-appoint">
-
-    <table id="teacher">
-      <thead>
-        <tr>
-          <th scope="col">Id</th>
-          <th scope="col">Teacher EmailID</th>
-          <th scope="col">Date</th>
-          <th scope="col">Time</th>
-          <th scope="col">Status</th>
-
-
-
-        </tr>
-      </thead>
-      <tbody id="teachers">
-      </tbody>
-    </table>
-
+  <div id="nav">
+    <!-- navContent -->
   </div>
 
+  <!-- ---------------navbar-end------------- -->
+  <div id="main">
+    <input id="input" type="text" placeholder="Write your review" />
+    <button class="button" id="btn" onclick="show('popup')">Submit</button>
+    <div class="popup" id="popup">
+      <i class="fa fa-check-circle" style="font-size: 70px; color: rgb(0, 255, 60)"></i>
+      <h2>Review submitted</h2>
+      <a href="./teacherprofile.html" onclick="hide('popup')">OK</a>
+    </div>
+  </div>
+
+  <!-- Footer  -->
   <footer>
     <div id="footer">
       <div id="footer-one">
@@ -119,11 +88,21 @@
     </div>
   </footer>
 
-
-
-  <script src="./sappointment.js"></script>
+</body>
 
 </html>
+<script>
+  $ = function (id) {
+    return document.getElementById(id);
+  };
+
+  var show = function (id) {
+    $(id).style.display = "block";
+  };
+  var hide = function (id) {
+    $(id).style.display = "none";
+  };
+</script>
 <script>
   let username = localStorage.getItem("username");
 

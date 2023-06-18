@@ -1,91 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Teachers</title>
-    <link rel="stylesheet" href="../styles/teachers.css" />
-  </head>
-  <body>
-    <div id="nav">
-      <!-- navContent -->
-    </div>
 
-    <!-- ---------------navbar-end------------- -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teachers</title>
+  <link rel="stylesheet" href="../styles/teachers.css" />
+</head>
 
-    <div id="searching">
-      <input
-        oninput="searchteacher()"
-        class="searchteacher"
-        placeholder="search teacher"
-      />
-      <input
-        oninput="searchsubject()"
-        class="searchsubject"
-        placeholder="search subject"
-      />
-    </div>
-    <div id="container"></div>
+<body>
+  <div id="nav">
+    <!-- navContent -->
+  </div>
 
-    <!-- ------------------footer----------- -->
-    <div id="footerMain">
-      <!-- logo icons -->
-      <div>
-        <div>
-          <img
-            id="FooterLogo"
-            src="../images/learnmate-logo-(blue).png"
-            alt=""
-          />
+  <!-- ---------------navbar-end------------- -->
+
+  <div id="searching">
+    <input oninput="searchteacher()" class="searchteacher" placeholder="search teacher" />
+    <input oninput="searchsubject()" class="searchsubject" placeholder="search subject" />
+  </div>
+  <div id="container"></div>
+
+  <!-- Footer  -->
+  <footer>
+    <div id="footer">
+        <div id="footer-one">
+          <div id="footer-head">
+            <p><b>Help</b></p>
+            <p>Customer Service</p>
+            <p>Track Order</p>
+            <p>Returns & Exchanges</p>
+            <p>Shipping</p>
+            <p>International Orders</p>
+            <p>Contact Us</p>
+          </div>
+          <div>
+            <p><b>Quick Links</b></p>
+            <p>Find a Store</p>
+            <p>Size Charts</p>
+            <p>Offers & Promotions</p>
+            <p>My Favorites</p>
+          </div>
+          <div>
+            <p><b>About Mawaw</b></p>
+            <p>Our Story</p>
+            <p>Careers</p>
+            <p>Social Responsibility</p>
+            <p>Privacy Policy</p>
+          </div>
+          <div style="display: flex;">
+            <input type="text" placeholder="Enter your Email" style="height: 30px; margin-top: 60px; background-color:grey">
+            <button style="background-color: rgb(71, 69, 69); color:white; height: 34px;margin-top: 60px;padding: 10px;">SIGN UP</button>
+          </div>
         </div>
-        <div id="icons">
-          <div><img src="../images/facebook.png" alt="" /></div>
-          <div><img src="../images/instagram.png" alt="" /></div>
-          <div><img src="../images/pinterest (1).png" alt="" /></div>
-          <div><img src="../images/twitter.png" alt="" /></div>
-          <div><img src="../images/youtube.png" alt="" /></div>
+        <div id="footer-two">
+          <div id="footer-two-one" >
+            <div>
+            <img src="https://www.jcrew.com/next-static/images/sidecar-modules/footer/instagram-2.svg" alt="">
+          </div>
+          <div>
+            <img src="https://www.jcrew.com/next-static/images/sidecar-modules/footer/twitter-2.svg" alt="">
+          </div>
+          <div>
+            <img style="margin-top: 5px;" src="https://www.jcrew.com/next-static/images/sidecar-modules/footer/linkedin.svg" alt="">
+          </div>
+          <div>
+            <img src="https://www.jcrew.com/next-static/images/sidecar-modules/footer/pinterest-2.svg" alt="">
+          </div>
+          <div>
+            <img src="https://www.jcrew.com/next-static/images/sidecar-modules/footer/youtube-2.svg" alt="">
+          </div>
+          </div>
         </div>
       </div>
-      <!-- 2nd div -->
-      <div>
-        <h3>General Links</h3>
-        <p>Search</p>
-        <p>About us</p>
-        <p>Accreditations</p>
-        <p>Blog</p>
-        <p>Contact Us</p>
-      </div>
-      <!-- 3rd div -->
-      <div>
-        <h3>For Parents/Students</h3>
-        <p>How it Works</p>
-        <p>Pricing</p>
-        <p>Packages</p>
-        <p>FAQs</p>
-        <p>Login</p>
-      </div>
-      <!-- 4th div -->
-      <div>
-        <h3>For Tutors</h3>
-        <p>How it Works</p>
-        <p>Pricing</p>
-        <p>Packages</p>
-        <p>FAQs</p>
-        <p>Login</p>
-      </div>
 
-      <!-- Footer image -->
-      <div id="footerImg">
-        <img
-          src="https://img.freepik.com/premium-photo/smiling-cute-teenage-girl-sunglasses-holding-notebook-writing-something-down-girl-blue-background-copy-space_2221-7455.jpg"
-          alt=""
-        />
-      </div>
+    <div style="width: 70%; margin: auto; padding-top: 10px;padding-left: 80px;">
+        <p style="color: white; ">© 2023 Skillmentor, Explore. Learn</p>
     </div>
-  </body>
+</footer>
+</body>
+
 </html>
+
+<!-- Main js  -->
 <script src="../scripts/teacher.js"></script>
+
+
 <!-- nav -->
 <script>
   let username = localStorage.getItem("username");

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <link rel="stylesheet" href="./signupAndLogin.css" />
+    <link rel="stylesheet" href="sweetalert2.min.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="signup_main_Div">
+        <img id="logo" src="./Image/learnmate-logo.png" alt="" />
+        <form action="">
+          <label for="">I am signing up as a</label>
+          <div class="switchContainer">
+            <div class="switchButton" id="button-container">
+              <div id="stuButton" class="button-element">
+                <p id="student">Student</p>
+              </div>
+              <p id="tutor">Tutor</p>
+            </div>
+          </div>
+          <label for="">First Name</label><br />
+          <input type="text" id="firstname" placeholder="First Name" required />
+          <br />
+          <label for="">Last Name</label><br />
+          <input
+            type="text"
+            id="lastname"
+            placeholder="Last Name"
+            required
+          /><br />
+          <label for="">Email</label><br />
+          <input
+            type="email"
+            id="email"
+            placeholder="xyz@gmail.com"
+            required
+          /><br />
+          <label for="">Password</label><br />
+          <input
+            type="password"
+            id="password"
+            placeholder="12345"
+            required
+          /><br />
+          <input
+            type="checkbox"
+            required
+            oninvalid="this.setCustomValidity('Please agree to the Terms of Service and Privacy Policy')"
+            oninput="this.setCustomValidity('')"
+          />
+          <label for=""
+            >I agree to the Terms of Service and Privacy Policy</label
+          ><br />
+          <input type="submit" value="Create Account" id="signupBtn" />
+          <div id="loginPageDiv">
+            <p>Have an Account ?</p>
+            <a href="./login.html">Log in</a>
+          </div>
+        </form>
+      </div>
+      <img
+        src="https://d1muf25xaso8hp.cloudfront.net/https%3A%2F%2Fe33c4c5b632a810b01b2cd6cfedf523b.cdn.bubble.io%2Ff1658771954894x663868872868510500%2Fsignup-banner.png?w=768&h=1282&auto=compress&dpr=2&fit=crop&q=75"
+        alt=""
+      />
+    </div>
+  </body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="./signup.js"></script>
