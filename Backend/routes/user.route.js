@@ -5,7 +5,7 @@ const fs = require("fs");
 require("dotenv").config();
 let userRoute = express.Router();
 require("dotenv").config();
-const { userModel } = require("../model/user.model");
+const { userModel } = require("../models/user.model");
 const passport = require("../config/google_oauth");
 
 userRoute.post("/user/signup", async (req, res) => {
