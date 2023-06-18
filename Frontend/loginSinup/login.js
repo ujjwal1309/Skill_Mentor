@@ -7,7 +7,7 @@ form.addEventListener("submit", (e) => {
   login(payload);
 });
 async function login(payload) {
-  const fetchedData = await fetch("https://alert-lime-bracelet.cyclic.app/user/login", {
+  const fetchedData = await fetch("https://tired-frog-cap.cyclic.app/user/login", {
     method: "POST",
     headers: {
       "Content-type": "application/json",
@@ -30,7 +30,7 @@ async function login(payload) {
     if (data.role == "student") {
       localStorage.setItem("studentID", data.userID);
       setTimeout(() => {
-        window.location.href = "../index.html";
+        window.location.href = "../pages/teachers.html";
       }, "2000");
     } else {
       setTimeout(() => {
