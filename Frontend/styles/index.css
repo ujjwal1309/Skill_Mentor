@@ -6,6 +6,8 @@
     font-family: 'Poppins', sans-serif;
     font-family: 'Signika', sans-serif;
 }
+
+/* nav............................................................................. */
 .nav{
     /* border: 1px solid; */
     display: flex;
@@ -154,6 +156,10 @@
 .tutorlogin:hover{
     background-color: pink;
 }
+
+/* nav.............................................. */
+
+
 .div1{
     /* border: 1px solid; */
     display: flex;
