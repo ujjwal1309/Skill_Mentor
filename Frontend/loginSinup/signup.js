@@ -45,7 +45,7 @@ signupForm.addEventListener("submit", (e) => {
 // posting data for signup
 async function signUp(regData) {
   console.log(regData);
-  await fetch("https://alert-lime-bracelet.cyclic.app/user/signup", {
+  await fetch("https://tired-frog-cap.cyclic.app/user/signup", {
     method: "POST",
     headers: {
       "Content-type": "application/json",
