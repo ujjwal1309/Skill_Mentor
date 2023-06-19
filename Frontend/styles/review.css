@@ -88,72 +88,39 @@
   }
 
   
-/* --------------------navbar----------------- */
-#navBtn:hover{
-  filter:brightness(110%);
-   box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-}
+/* nav............................................................................. */
 
-#hamburger,#hamBtn{
-  display:none;
-}
 
-#logo {
- 
-width: 75px;
-height: 40px;
-border-radius: 22px;
-}
+/* nav............................................................................. */
 
-#nav {
-display: flex;
-justify-content: space-between;
-/* background-color: #dedede; */
-border: 0px solid black;
-width: 90%;
-margin: auto;
-padding: 13px;
-}
-#nav>div:nth-child(2){
+.nav{
+  /* border: 1px solid black; */
+  background-color: #FBE9E7;
   display: flex;
-  justify-content: space-evenly;
-  gap:20px;
-}
-body {
-/* width: 90%; */
-border: 0px solid red;
-margin: auto;
-font-family: sans-serif;
-}
-#navbtnDiv {
-  border:0px solid red;
-  width:40%;
-color:white;
-}
-#navbtnDiv a{
-  border:0px solid green;
-  color:white;
-  text-decoration: none;
-}
-/* #navbtnDiv>a{
-border:1px solid green;
-display:inline-block;
-} */
-#navBtn {
-width: 80%;
-color:white;
-border:1px solid rgb(4, 0, 255);
-/* height: 50px; */
+  justify-content: left;
+  padding: 0px 20px;
 
-border-radius: 7px;
-background-color: #f39c12 ;
-border: 0px solid green;
-color: white;
-font-size: 14px;
-line-height: 18px;
-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-font-weight: bold;
+  /* z-index: 1; */
+  
 }
+.nav > a {
+  /* border: 1px solid red; */
+  width: 250px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav > a > img{
+  height: 70px;
+  
+}
+
+
+/* nav.............................................. */
+
+
+/* nav.............................................. */
 
 @media all and (min-width:320px) and (max-width:780px)  {
   #nav{
