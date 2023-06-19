@@ -38,8 +38,8 @@ if(username){
     console.log(count1%2)
     if(count1%2!=0){
     accountdropdown.innerHTML=`
-    <div>My Dashboard</div>
-    <div><a href="../pages/teachers.html" style="text-decoration: none;">Find tutor</a></div>
+    <div> My Dashboard</div>
+    <div> <a href="./pages/teachers.html" style="text-decoration: none;">Find tutor</a> </div>
     <div>Message</div>
     <div>My profile</div>
     <div class="logout">Log Out</div>

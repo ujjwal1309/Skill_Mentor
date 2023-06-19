@@ -57,7 +57,7 @@ async function signUp(regData) {
       if (result.status == 200) {
         Swal.fire({
           icon: "success",
-          title: "Hey👋! Welcome to learnmate",
+          title: "Hey👋! Welcome to Skill mentor",
           showConfirmButton: false,
           timer: 2000,
         });
