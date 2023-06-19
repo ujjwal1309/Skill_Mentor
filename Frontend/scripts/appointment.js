@@ -36,3 +36,5 @@ async function bookSlot(date, time) {
     alert("something went wrong");
   }
 }
+
+

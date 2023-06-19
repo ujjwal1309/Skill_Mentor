@@ -10,9 +10,16 @@
 </head>
 
 <body>
-  <div id="nav">
-    <!-- navContent -->
-  </div>
+  <!-- nav................................. -->
+  <nav class="nav">
+    <a href="./index.html">
+      <img src="../images/logo.jpg" alt="">
+      <h1>Skill Mentor</h1>
+    </a>
+    
+  </nav>
+
+  <!-- nav..................................... -->
 
   <!-- ---------------navbar-end------------- -->
 
@@ -25,45 +32,49 @@
   <!-- Footer  -->
   <footer>
     <div id="footer">
-        <div id="footer-one">
-          <div id="footer-head">
-            <p><b>Help</b></p>
-            <p>Customer Service</p>
-            <p>Track Order</p>
-            <p>Returns & Exchanges</p>
-            <p>Shipping</p>
-            <p>International Orders</p>
-            <p>Contact Us</p>
-          </div>
-          <div>
-            <p><b>Quick Links</b></p>
-            <p>Find a Store</p>
-            <p>Size Charts</p>
-            <p>Offers & Promotions</p>
-            <p>My Favorites</p>
-          </div>
-          <div>
-            <p><b>About Mawaw</b></p>
-            <p>Our Story</p>
-            <p>Careers</p>
-            <p>Social Responsibility</p>
-            <p>Privacy Policy</p>
-          </div>
-          <div style="display: flex;">
-            <input type="text" placeholder="Enter your Email" style="height: 30px; margin-top: 60px; background-color:grey">
-            <button style="background-color: rgb(71, 69, 69); color:white; height: 34px;margin-top: 60px;padding: 10px;">SIGN UP</button>
-          </div>
+      <div id="footer-one">
+        <div id="footer-head">
+          <p><b>Help</b></p>
+          <p>Customer Service</p>
+          <p>Track Order</p>
+          <p>Returns & Exchanges</p>
+          <p>Shipping</p>
+          <p>International Orders</p>
+          <p>Contact Us</p>
         </div>
-        <div id="footer-two">
-          <div id="footer-two-one" >
-            <div>
+        <div>
+          <p><b>Quick Links</b></p>
+          <p>Find a Store</p>
+          <p>Size Charts</p>
+          <p>Offers & Promotions</p>
+          <p>My Favorites</p>
+        </div>
+        <div>
+          <p><b>About Mawaw</b></p>
+          <p>Our Story</p>
+          <p>Careers</p>
+          <p>Social Responsibility</p>
+          <p>Privacy Policy</p>
+        </div>
+        <div style="display: flex;">
+          <input type="text" placeholder="Enter your Email"
+            style="height: 30px; margin-top: 60px; background-color:grey">
+          <button
+            style="background-color: rgb(71, 69, 69); color:white; height: 34px;margin-top: 60px;padding: 10px;">SIGN
+            UP</button>
+        </div>
+      </div>
+      <div id="footer-two">
+        <div id="footer-two-one">
+          <div>
             <img src="https://www.jcrew.com/next-static/images/sidecar-modules/footer/instagram-2.svg" alt="">
           </div>
           <div>
             <img src="https://www.jcrew.com/next-static/images/sidecar-modules/footer/twitter-2.svg" alt="">
           </div>
           <div>
-            <img style="margin-top: 5px;" src="https://www.jcrew.com/next-static/images/sidecar-modules/footer/linkedin.svg" alt="">
+            <img style="margin-top: 5px;"
+              src="https://www.jcrew.com/next-static/images/sidecar-modules/footer/linkedin.svg" alt="">
           </div>
           <div>
             <img src="https://www.jcrew.com/next-static/images/sidecar-modules/footer/pinterest-2.svg" alt="">
@@ -71,98 +82,17 @@
           <div>
             <img src="https://www.jcrew.com/next-static/images/sidecar-modules/footer/youtube-2.svg" alt="">
           </div>
-          </div>
         </div>
       </div>
+    </div>
 
     <div style="width: 70%; margin: auto; padding-top: 10px;padding-left: 80px;">
-        <p style="color: white; ">© 2023 Skillmentor, Explore. Learn</p>
+      <p style="color: white; ">© 2023 Skillmentor, Explore. Learn</p>
     </div>
-</footer>
+  </footer>
 </body>
 
 </html>
 
 <!-- Main js  -->
 <script src="../scripts/teacher.js"></script>
-
-
-<!-- nav -->
-<script>
-  let username = localStorage.getItem("username");
-
-  let nav = document.querySelector("#nav");
-  if (username == null) {
-    nav.innerHTML = null;
-    nav.innerHTML = `<div>
-          <a href="./index.html"
-            ><img src="./learnmate-logo.png" alt="" id="logo"
-          /></a>
-        </div>
-        <div id="navbtnDiv">
-          <button id="navBtn">
-            <a href="./teachers.html">Tutors</a>
-          </button>
-
-          <button id="navBtn"><a href="../pages/showappointment.html">Schedules</a></button>
-          <button id="navBtn">
-            <a href="../loginSignup/signup.html">Signup</a>
-          </button>
-
-          <button id="navBtn">
-            <a href="../loginSignup/login.html">SignIn</a>
-          </button>
-        </div>
-
-        <div id="hamburger">
-          <img src="./images/menus.png" alt="" />
-          <div id="hamBtn">
-            <button id="navBtn">
-            <a href="./teachers.html">Tutors</a>
-          </button>
-
-          <button id="navBtn"><a href="../pages/showappointment.html">Schedules</a></button>
-          <button id="navBtn">
-            <a href="../loginSignup/signup.html">Signup</a>
-          </button>
-
-          <button id="navBtn">
-            <a href="../loginSignup/login.html">SignIn</a>
-          </button>
-          </div>
-        </div>`;
-  } else {
-    nav.innerHTML = null;
-    nav.innerHTML = `<div>
-          <a href="./index.html"
-            ><img src="./learnmate-logo.png" alt="" id="logo"
-          /></a>
-        </div>
-        <div id="navbtnDiv">
-          <button id="navBtn">
-            <a href="./teachers.html">Tutors</a>
-          </button>
-
-          <button id="navBtn"><a href="../pages/showappointment.html">Schedules</a></button>
-          <button class="logoutBtn">Logout</button>
-        </div>
-
-        <div id="hamburger">
-          <img src="./images/menus.png" alt="" />
-          <div id="hamBtn">
-            <button id="navBtn">
-              <a href="./teachers.html">Tutors</a>
-            </button>
-
-            <button id="navBtn"><a href="../pages/showappointment.html">Schedules</a></button>
-            <button class="logoutBtn">Logout</button>
-          </div>
-        </div>`;
-
-    let logoutBtn = document.querySelector(".logoutBtn");
-    logoutBtn.addEventListener("click", () => {
-      localStorage.removeItem("username");
-      window.location.href = "../index.html";
-    });
-  }
-</script>

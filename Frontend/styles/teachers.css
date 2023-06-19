@@ -2,6 +2,34 @@
   font-family:sans-serif;
 }
 
+/* nav............................................................................. */
+
+.nav{
+  /* border: 1px solid black; */
+  background-color: #FBE9E7;
+  display: flex;
+  justify-content: left;
+  padding: 0px 20px;
+
+  /* z-index: 1; */
+  
+}
+.nav > a {
+  /* border: 1px solid red; */
+  width: 250px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav > a > img{
+  height: 70px;
+  
+}
+
+
+/* nav.............................................. */
+
 #container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

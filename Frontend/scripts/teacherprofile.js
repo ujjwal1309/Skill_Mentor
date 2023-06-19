@@ -14,3 +14,4 @@ let details=JSON.parse(localStorage.getItem("profile"));
     document.querySelector("#sub-btn").addEventListener("click",function(){
         window.location.href="./review.html";
     });
+
