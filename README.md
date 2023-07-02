@@ -1,7 +1,11 @@
 # Skill mentor  (tutor finding app)
 
 # Tutor Appointment Booking System
-we are live at https://649036113722945443c6387d--spiffy-unicorn-2d615b.netlify.app/index.html
+Deployed Link of project: https://649036113722945443c6387d--spiffy-unicorn-2d615b.netlify.app/index.html
+
+![skillMentor](https://github.com/ujjwal1309/rainy-scissors-3404/assets/113464291/e6931305-dbcf-4579-8cdc-6de5ff0123ed)
+
+
 
 This project is a web-based appointment booking system for a Tutor. It allows users to book appointments, view their appointments, and manage their profiles. Admin users can manage appointments, view appointment data, and manage users,manage teachers.
 
