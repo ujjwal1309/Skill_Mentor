@@ -3,7 +3,8 @@
 # Tutor Appointment Booking System
 Deployed Link of project: https://649036113722945443c6387d--spiffy-unicorn-2d615b.netlify.app/index.html
 
-![skillMentor](https://github.com/ujjwal1309/rainy-scissors-3404/assets/113464291/e6931305-dbcf-4579-8cdc-6de5ff0123ed)
+![Screenshot 2023-07-27 114646](https://github.com/ujjwal1309/Skill_Mentor/assets/113464291/2b6ea86d-ec17-404f-bc6f-3a5430fd6b2f)
+
 
 
 
