@@ -9,7 +9,7 @@
 
 /* nav............................................................................. */
 .nav{
-    /* border: 1px solid; */
+   
     display: flex;
     justify-content: space-between;
     background-color: #FBE9E7;
@@ -135,7 +135,7 @@
 .loginbutton:hover{
     background-color: pink;
 }
-.tutorlogin{
+/* .tutorlogin{
     background-color:white;
     margin-top: 10px;
     height: 40px;
@@ -146,7 +146,7 @@
     padding-right: 10px;
     border: 0px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-}
+} */
 .tutorloginIflogin{
     display: none;
 }
@@ -207,15 +207,23 @@
     margin-right: 10px;
     border: 0px;
 }
+#search{
+    border: 1px transparent;
+    height: 60px;
+    font-size: 20px;
+}
+input:focus {
+    outline: none; 
+    border-color: initial; 
+  }
 
 .subject-selection{
     display: flex;
-    /* border: 1px solid; */
     width: 300px;
+  
 }
+
 .subject-selection h4{
-    /* border: 1px solid; */
-    /* width: 300px; */
      margin-top: 20px;
      padding-left: 25px;
 }
@@ -227,16 +235,37 @@
 .subject-dropdown{
     /* border: 1px solid; */
     width: 230px;
-    height: 400px;
-    border-radius: 15px;
+    border-radius: 10px;
     margin-left: 30%;
     background-color: white;
     margin-top: 10px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    max-height: 400px;
+    overflow-y: scroll;
     display: none;
+   
 }
 .subject-dropdown-visible{
     display: block;
+}
+.subject-dropdown::-webkit-scrollbar{
+    display: none;
+}
+#worddiv{
+   
+    background-color: azure;
+    font-family:sans-serif;
+    color: rgb(97, 94, 94);
+    font-size: 15px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    background-color: rgb(247, 241, 246);
+    border-bottom: 1px solid rgb(199, 194, 194);
+    text-align: center;
+    
+}
+#worddiv:hover{
+    background-color: antiquewhite;
 }
 
 .div1-child2>div{

@@ -10,24 +10,64 @@
 </head>
 
 <body>
-  <!-- nav................................. -->
-  <nav class="nav">
-    <a href="../index.html">
-      <img src="../images/logo.jpg" alt="">
-      <h1>Skill Mentor</h1>
-    </a>
-    
-  </nav>
-
   <!-- nav..................................... -->
-
+  <nav class="nav">
+    <div class="title">
+        <img src="../images/skill mentor.jpg" alt="">
+        <h1>Skill Mentor</h1>
+    </div>
+    <div class="logindiv">
+        <div class="loginfortutor">
+            <div class="tutorlogin"></div>
+        </div>
+        <div class="account">
+            <div class="userdisplay"></div>
+            <div class="hamberger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <a href="./loginSinup/login.html"><button class="loginbutton">
+                Log in
+            </button> </a>
+        </div>
+        <div class="accountdropdown"></div>
+    </div>   
+</nav>
   <!-- ---------------navbar-end------------- -->
 
-  <div id="searching">
-    <input oninput="searchteacher()" class="searchteacher" placeholder="search teacher" />
-    <input oninput="searchsubject()" class="searchsubject" placeholder="search subject" />
-  </div>
-  <div id="container"></div>
+  <div id="women-main">
+        
+    <div id="sortby">
+        <select name="sort by" id="sort">
+            <option value="" selected disabled>sort</option>
+            <option value="high to low">price:high to low</option>
+            <option value="low to high">price:low to high</option>
+        </select>
+    </div>
+    <div id="product-div">
+        <div id="filter">
+            <p id="filterby">FILTER BY</p>
+            <div class="filter-div" id="filter-one">
+                <h4>SUBJECTS</h4>
+                <span><i class="fa fa-angle-down" style="font-size:24px"></i></span>
+            </div>
+            <div class="filter-dropdown" id="catagories-dropdown">
+            </div>
+            <div class="filter-div" id="filter-two">
+                <h4>PRICE</h4>
+                <span><i class="fa fa-angle-down" style="font-size:24px"></i></span>
+            </div>
+            <div  class="filter-dropdown" id="price-dropdown">
+            </div>
+        </div>
+         <div id="product">
+            <h3 id="filtermessage"></h3>
+         </div>
+    </div>
+
+</div> 
+  
 
   <!-- Footer  -->
   <footer>

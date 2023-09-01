@@ -13,14 +13,14 @@
       <div id="signup_main_Div">
         <img id="logo" src="./Image/learnmate-logo.png" alt="" />
         <form action="">
-          <label for="">I am signing up as a</label>
+          <label for="" style="text-align: center; ;display:block;">add your details here</label>
           <div class="switchContainer">
-            <div class="switchButton" id="button-container">
-              <div id="stuButton" class="button-element">
-                <p id="student">Student</p>
-              </div>
-              <p id="tutor">Tutor</p>
-            </div>
+            <!-- <div class="switchButton" id="button-container"> -->
+              <!-- <div id="stuButton" class="button-element">
+                <p id="student">Studedt</p>
+              </div> -->
+              <!-- <p id="tutor">Tutor</p> -->
+            <!-- </div> -->
           </div>
           <label for="">First Name</label><br />
           <input type="text" id="firstname" placeholder="First Name" required />
@@ -56,6 +56,29 @@
             >I agree to the Terms of Service and Privacy Policy</label
           ><br />
           <input type="submit" value="Create Account" id="signupBtn" />
+          <br>
+          <h4 id="msg"></h4>
+          <h3 style="display: block; text-align: center;">OR</h3>
+          <br>
+          <div id="border-google" style="border: 3px solid rgb(149, 149, 232);
+          padding: 2px;
+          border-radius: 5px;"
+          >
+            <a id="submit-google" href="http://localhost:8600/auth/google" style="display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 5vh;
+            /* Adjust the height to match your layout */
+            font-size: 20px;
+            text-decoration: none;
+            color: #141a34;
+            font-weight: 700;
+            /* border: 10px solid red; */
+            /* margin: 10px; */"><img style=" max-width: 10%;"
+                src="https://cdn-teams-slug.flaticon.com/google.jpg" alt="">Continue With
+              Google</a>
+          </div>
+
           <div id="loginPageDiv">
             <p>Have an Account ?</p>
             <a href="./login.html">Log in</a>

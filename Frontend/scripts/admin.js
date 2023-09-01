@@ -2,8 +2,8 @@ let baseurl = "http://localhost:8600/user/";
 let product=document.getElementById("product")
 let userid=JSON.parse(localStorage.getItem("user"))||null
 let logo=document.querySelector(".title")
- logo.addEventListener("click",()=>{
-  window.location.href="../index.html"
+logo.addEventListener("click",()=>{
+  window.location.href="./admin.html"
 })
 const urlParams = new URLSearchParams(window.location.search);
 const userDataParam = urlParams.get("userdata");
@@ -69,8 +69,8 @@ function userdisplay(username,role){
   
       let logout=document.querySelector(".logout")
       logout.addEventListener("click",()=>{
-        localStorage.removeItem("username")
-        window.location.reload()
+        localStorage.removeItem("userid")
+        window.location.href="../index.html"
       })
   
       }
@@ -115,7 +115,7 @@ function render(data){
       itemdiv.addEventListener("click",()=>{
           localStorage.setItem("teacherid",element._id)
           setTimeout(()=>{
-            window.location.href=`./teacherprofile.html?teacherId=${element._id}`
+            window.location.href=`./adminteacherprofile.html?teacherId=${element._id}`
           },0)
           
   })
@@ -301,9 +301,6 @@ sortselect.addEventListener("change",event=>{
 
   }
 })
-
-
-
 
 
 

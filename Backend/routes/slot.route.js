@@ -1,54 +1,47 @@
 const { slotModel } = require("../models/slot.model");
 const slotRoute = require("express").Router();
 
-slotRoute.get("/allSlots", async (req, res) => {
+slotRoute.get("/allslotTeacher/:id", async (req, res) => {
+  let {id}=req.params
   try {
-    let allSlot = await slotModel.find();
-    res.send(allSlot);
+    let allSlot = await slotModel
+    .find({ teacher_id: id })
+    .sort({ meeting_time: 1 });
+    res.status(200).send({msg:allSlot});
   } catch (error) {
-    res.send("something went wrong");
+    res.status(400).send({msg:"something went wrong"});
   }
 });
 
-slotRoute.post("/bookSlots", async (req, res) => {
-  let payload = req.body;
-  console.log(payload);
+slotRoute.get("/allslotStudent/:id", async (req, res) => {
+  let {id}=req.params
   try {
-    let bookSlot = await new slotModel(payload);
+    let allSlot = await slotModel.find({student_id:id});
+    res.status(200).send({msg:allSlot});
+  } catch (error) {
+    res.status(400).send({msg:"something went wrong"});
+  }
+});
+
+slotRoute.post("/createSlot/:id", async (req, res) => {
+  let {id}=req.params
+  try {
+    let bookSlot = await new slotModel({meeting_time:req.body.dateTime,teacher_id:id});
     await bookSlot.save();
-    res.send("slot Booked");
+    res.status(200).send({msg:"slot created"});
   } catch (error) {
-    res.send("something went wrong");
+    res.status(400).send({msg:"something went wrong"});
   }
 });
 
-slotRoute.get("/teacherSlots/:email", async (req, res) => {
-  try {
-    let teacherEmailID = req.params.email;
-    let teacherSlotData = await slotModel.find({ teacherEmailID });
-    res.send(teacherSlotData);
-  } catch (error) {
-    res.send("something went wrong");
-  }
-});
 
-slotRoute.get("/studentSlots/:id", async (req, res) => {
+slotRoute.patch("/bookSlot/:id", async (req, res) => {
+  let {id}=req.params
   try {
-    let studentID = req.params.id;
-    let studentSlotData = await slotModel.find({ studentID });
-    res.send(studentSlotData);
+    await slotModel.findByIdAndUpdate({student_id:id,status:true});
+    res.status(200).send({msg:"slot booked"});
   } catch (error) {
-    res.send("something went wrong");
-  }
-});
-slotRoute.patch("/update/:id", async (req, res) => {
-  let payload = req.body
-  try {
-    let updateid = req.params.id;
-    let updateData = await slotModel.findByIdAndUpdate({_id:updateid },payload);
-   res.send("status updates")
-  } catch (error) {
-    res.send("something went wrong");
+    res.status(400).send({msg:"something went wrong"});
   }
 });
 

@@ -1,50 +1,92 @@
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="./sappointment.css" />
+  <link rel="stylesheet" href="../styles/showappointment.css">
+  <link rel="stylesheet" href="../styles/calendar.css">
 </head>
-
 <body>
-
-      <!-- nav................................. -->
-      <nav class="nav">
-        <a href="../index.html">
-          <img src="../images/logo.jpg" alt="">
+    <!-- nav..................................... -->
+    <nav class="nav">
+      <div class="title">
+          <img src="../images/skill mentor.jpg" alt="">
           <h1>Skill Mentor</h1>
-        </a>
-        
-      </nav>
+      </div>
+      <div class="logindiv">
+          <div class="loginfortutor">
+              <div class="tutorlogin"></div>
+          </div>
+          <div class="account">
+              <div class="userdisplay"></div>
+              <div class="hamberger">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+              </div>
+              <a href="./loginSinup/login.html"><button class="loginbutton">
+                  Log in
+              </button> </a>
+          </div>
+          <div class="accountdropdown"></div>
+      </div>   
+  </nav>
+    <!-- ---------------navbar-end------------- -->
+
+    <div id="main">
+      <div id="calendar-div">
+        <h1 id="title">Create Slots</h1>
+        <div id="calendar" style="display: fle;">
+          <div class="wrapper">
+            <header>
+              <p class="current-date"></p>
+              <div class="icons">
+                <span id="prev" class="material-symbols-rounded"><</span>
+                <span id="next" class="material-symbols-rounded">></span>
+              </div>
+            </header>
+            <div class="calendar">
+              <ul class="weeks">
+                <li>Sun</li>
+                <li>Mon</li>
+                <li>Tue</li>
+                <li>Wed</li>
+                <li>Thu</li>
+                <li>Fri</li>
+                <li>Sat</li>
+              </ul>
+              <ul class="days"></ul>
+            </div>
+          </div>
+        </div>
+        <div id="timeinput">
+          <h5>Select Time</h5>
+          <input id="timeinputtime" type="time" >
+        </div>
+        <div>
+          <button id="submitslot">SUBMIT</button>
+        </div>
+      </div>
+      <div id="booking-section">
+        <div id="booking-data">
+          <div></div>
+          <div id="slot-display">
+             
+          </div>
+          
+        </div>
+      </div>
     
-      <!-- nav..................................... -->
+     </div>
+    
 
 
 
-  <div id="after-nav-col-2" class="side-part appointment all-appoint">
-
-    <table id="teacher">
-      <thead>
-        <tr>
-          <th scope="col">Id</th>
-          <th scope="col">Teacher EmailID</th>
-          <th scope="col">Date</th>
-          <th scope="col">Time</th>
-          <th scope="col">Status</th>
 
 
-
-        </tr>
-      </thead>
-      <tbody id="teachers">
-      </tbody>
-    </table>
-
-  </div>
-
+     <!-- Footer  -->
   <footer>
     <div id="footer">
       <div id="footer-one">
@@ -105,9 +147,7 @@
       <p style="color: white; ">© 2023 Skillmentor, Explore. Learn</p>
     </div>
   </footer>
-
-
-
-  <script src="./sappointment.js"></script>
-
+  
+</body>
+<script src="../scripts/showappointments.js"></script>
 </html>

@@ -1,19 +1,25 @@
 
 let userid=JSON.parse(localStorage.getItem("user"))||null
-console.log(userid)
-
-
+console.log(userid,"userid")
+let logo=document.querySelector(".title")
+ logo.addEventListener("click",()=>{
+  window.location.href="../index.html"
+})
 const urlParams = new URLSearchParams(window.location.search);
 const userDataParam = urlParams.get("userdata");
+let imageDiv=document.getElementById("imageDiv")
+imageDiv.innerHTML=`<img id="img" src=${userid.image}
+alt="image">`
+let userName=document.getElementById("user-detail-name")
+userName.innerText=userid.name
  
   if(!userid){
   if (userDataParam) {
     try {
       const userData = JSON.parse(decodeURIComponent(userDataParam));
       const userName = userData.name
-      let role=userData.role
-      let appointed=userData.appointed
-      userdisplay(userName,role,appointed)
+      role=userData.role
+      userdisplay(userName,role)
       let userID=userData._id
       localStorage.setItem("user",JSON.stringify(userData))
     } catch (error) {
@@ -22,7 +28,7 @@ const userDataParam = urlParams.get("userdata");
   }
 }
 else{
-  userdisplay(userid.name,userid.role,userid.appointed)
+  userdisplay(userid.name,userid.role)
    
 }
 
@@ -52,7 +58,7 @@ window.addEventListener("scroll",()=>{
 
 //user display...................................
  
-function userdisplay(username,role,appointed){
+function userdisplay(username,role){
 let userdisplay=document.querySelector(".userdisplay")
 let hamberger=document.querySelector(".hamberger")
 let accountdropdown=document.querySelector(".accountdropdown")
@@ -69,15 +75,14 @@ if(username){
     count1++
     console.log(count1%2)
     if(count1%2!=0){
-    if(role.includes("tutor")&&appointed==true){
+    if(role.includes("tutor")){
     accountdropdown.innerHTML=`
     <div><a href="./pages/showappointment.html" style="text-decoration: none;">student dashboard</a> </div>
     <div><a href="./pages/showappointment.html" style="text-decoration: none;">tutor dashboard</a> </div>
     <div> <a href="./pages/teachers.html" style="text-decoration: none;">Find tutor</a> </div>
-    <div> <a href="./pages/profile.html" style="text-decoration: none;">My profile</a> </div>
+    <div>My profile</div>
     <div class="logout">Log Out</div>
     `
-    
     }
     else{
       accountdropdown.innerHTML=`
@@ -91,8 +96,8 @@ if(username){
 
     let logout=document.querySelector(".logout")
     logout.addEventListener("click",()=>{
-      localStorage.removeItem("user")
-      window.location.href="./index.html"
+      localStorage.removeItem("username")
+      window.location.reload()
     })
 
     }
@@ -111,65 +116,42 @@ else{
 }
 // ...............................................
 
-let subjectSelection=document.querySelector(".subject-selection")
+const fileInput = document.getElementById('fileInput');
+const uploadButton = document.getElementById('uploadButton'); // Move this outside the input event listener
 
-let subjectDropdown=document.querySelector(".subject-dropdown")
-let count=0
-subjectSelection.addEventListener("click",()=>{
-  count++
-  console.log(count)
-  if(count%2!=0){
-    console.log(5)
-    subjectDropdown.classList.add("subject-dropdown-visible")
+let formData = new FormData(); // Create FormData to send the image
+
+fileInput.addEventListener('input', (event) => {
+  const selectedFile = event.target.files[0]; // Get the first selected file
+
+  if (selectedFile) {
+    const maxSizeInBytes = 25000; // 25 KB in bytes
+
+    if (selectedFile.size > maxSizeInBytes) {
+      alert('File size exceeds the limit of 25 KB.');
+      fileInput.value = ''; // Clear the selected file
+    } else {
+      formData.append('image', selectedFile); // Append the image file to the FormData object
+    }
   }
-  else{
-    subjectDropdown.classList.remove("subject-dropdown-visible")
-  }
-})
+});
 
+uploadButton.addEventListener('click', (e) => {
+  e.preventDefault();
 
-// ...........search..........//
+  fetch(`http://localhost:8600/user/upload/${userid._id}`, {
+    method: 'PATCH',
+    body: formData, // Use the FormData object directly
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      localStorage.setItem("user",JSON.stringify(data.msg))
+      setTimeout(()=>{
+        window.location.reload()
+      },0)
+    });
+});
 
-
-let search=document.getElementById("search")
-let searchdropdown=document.querySelector(".subject-dropdown")
-search.addEventListener("input",()=>{
-    searchdropdown.innerHTML=null
-    let searchword=search.value
-    
-    
-    fetch(`http://localhost:8600/user/search?subject=${searchword}`)
-
-    .then(res=>res.json())
-      .then(data=>{
-    console.log(data)
-      data.msg.forEach(element => {
-        let worddiv=document.createElement("div")
-        worddiv.setAttribute("id","worddiv")
-        worddiv.addEventListener("click",()=>{
-            localStorage.setItem("element",element._id)
-            window.location.href="./pages/teacher.html"
-        })
-         let word=document.createElement("h5")
-         word.innerText=`${element.name} (${element.subject})`
-         worddiv.append(word)
-         searchdropdown.append(worddiv)
-         console.log(searchword)
-        let x=false
-        if(searchword){
-         x=true
-         }
-         console.log(x)
-         if(x==false){
-        searchdropdown.innerHTML=null
-          }
-      });
-    
-    })
-    
-
-    
-})
   
-
 

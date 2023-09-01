@@ -1,44 +1,43 @@
 let form = document.querySelector("form");
-form.addEventListener("submit", (e) => {
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
   let email = form.email.value;
   let password = form.password.value;
   let payload = { email, password };
-  login(payload);
+  console.log(payload);
+  await login(payload); // Make sure to await the login function
 });
-async function login(payload) {
-  const fetchedData = await fetch("https://tired-frog-cap.cyclic.app/user/login", {
-    method: "POST",
-    headers: {
-      "Content-type": "application/json",
-    },
-    body: JSON.stringify(payload),
-  });
 
-  const data = await fetchedData.json();
-  if (fetchedData.status == 200) {
-    console.log(data);
-    Swal.fire({
-      icon: "success",
-      title: "Yay! Login Successful 😍",
-      showConfirmButton: false,
-      timer: 2000,
-    });
-    localStorage.setItem("username", data.username);
-    localStorage.setItem("token", data.token);
-    localStorage.setItem("role", data.role);
-    if (data.role == "student") {
-      localStorage.setItem("studentID", data.userID);
-      setTimeout(() => {
-        window.location.href = "../pages/teachers.html";
-      }, "2000");
-    } else {
-      setTimeout(() => {
-        localStorage.setItem("teacherEmailID", data.email);
-        window.location.href = "../admin/admin.html";
-      }, "2000");
-    }
-  } else {
-    Swal.fire("Wrong Credentials ❌");
+async function login(payload) {
+  try {
+    const fetchedData = await fetch("http://localhost:8600/user/login", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    })
+    .then((res)=>res.json())
+    .then((data)=>{
+      console.log(data)
+      if(data.status===200){
+        document.getElementById("msg").innerText="login sussessfull"
+        setTimeout(()=>{
+          if(data.role.includes("admin")){
+            window.location.href=`../pages/admin.html?userdata=${data.data}`
+          }
+          else{
+            window.location.href=`../index.html?userdata=${data.data}`
+          }
+         
+        },2000)
+      }
+      else{
+        document.getElementById("msg").innerText=data.msg
+      }
+    })
+    
+  }catch(err){
+    console.log(err)
   }
-}
+  }
